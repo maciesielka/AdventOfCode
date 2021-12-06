@@ -57,6 +57,7 @@ struct Board {
     var unmarkedNumbers: Set<Int> = []
 
     var isComplete = false
+    var countDiagonals = false
 
     init(string: String) {
         let ints = string.components(separatedBy: .newlines)
@@ -86,7 +87,6 @@ struct Board {
         }
 
         // diagonals
-        let countDiagonals = false
         if countDiagonals {
             var newSet: Set<Int> = []
             for coordinate in ints.indices {
