@@ -10,7 +10,6 @@
 		0C1A83C9276BF68100BA014D /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 0C1A83C8276BF68100BA014D /* Collections */; };
 		0C1A83CB276BF68100BA014D /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 0C1A83CA276BF68100BA014D /* DequeModule */; };
 		0C1A83CD276BF68100BA014D /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 0C1A83CC276BF68100BA014D /* OrderedCollections */; };
-		0C1A83CF276BF68100BA014D /* PriorityQueueModule in Frameworks */ = {isa = PBXBuildFile; productRef = 0C1A83CE276BF68100BA014D /* PriorityQueueModule */; };
 		0C39A19F2757C14B00966D74 /* AdventOfCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C39A19E2757C14B00966D74 /* AdventOfCodeApp.swift */; };
 		0C39A1A12757C14B00966D74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C39A1A02757C14B00966D74 /* ContentView.swift */; };
 		0C39A1A32757C14C00966D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C39A1A22757C14C00966D74 /* Assets.xcassets */; };
@@ -32,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C1A83CF276BF68100BA014D /* PriorityQueueModule in Frameworks */,
 				0C1A83C9276BF68100BA014D /* Collections in Frameworks */,
 				0C39A1AF2757C17900966D74 /* Algorithms in Frameworks */,
 				0C1A83CD276BF68100BA014D /* OrderedCollections in Frameworks */,
@@ -100,7 +98,6 @@
 				0C1A83C8276BF68100BA014D /* Collections */,
 				0C1A83CA276BF68100BA014D /* DequeModule */,
 				0C1A83CC276BF68100BA014D /* OrderedCollections */,
-				0C1A83CE276BF68100BA014D /* PriorityQueueModule */,
 			);
 			productName = AdventOfCode;
 			productReference = 0C39A19B2757C14B00966D74 /* AdventOfCode.app */;
@@ -371,7 +368,7 @@
 			repositoryURL = "https://github.com/apple/swift-collections.git";
 			requirement = {
 				kind = revision;
-				revision = 22dc81b89fc1dee9d52c6a3fcfa1fcd08f184ae8;
+				revision = 286fedb1e8f6b2567cd214cf1127a9322dea1400;
 			};
 		};
 		0C39A1AD2757C17900966D74 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
@@ -379,7 +376,7 @@
 			repositoryURL = "https://github.com/apple/swift-algorithms.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.1;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -399,11 +396,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0C1A83C7276BF68100BA014D /* XCRemoteSwiftPackageReference "swift-collections" */;
 			productName = OrderedCollections;
-		};
-		0C1A83CE276BF68100BA014D /* PriorityQueueModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0C1A83C7276BF68100BA014D /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = PriorityQueueModule;
 		};
 		0C39A1AE2757C17900966D74 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
