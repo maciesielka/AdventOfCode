@@ -23,7 +23,6 @@
 		0C39A1A02757C14B00966D74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C39A1A22757C14C00966D74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C39A1A52757C14C00966D74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0C39A1AC2757C15C00966D74 /* 2021.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 2021.playground; sourceTree = "<group>"; };
 		0C929DFA2938F12400561D89 /* 2022.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 2022.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -46,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				0C929DFA2938F12400561D89 /* 2022.playground */,
-				0C39A1AC2757C15C00966D74 /* 2021.playground */,
 				0C39A19D2757C14B00966D74 /* AdventOfCode */,
 				0C39A19C2757C14B00966D74 /* Products */,
 			);

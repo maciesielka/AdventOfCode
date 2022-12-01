@@ -1,7 +1,4 @@
-//: [Previous](@previous)
-
 import Foundation
 
-var greeting = "Hello, playground"
-
-//: [Next](@next)
+Runner.part1()
+Runner.part2()
