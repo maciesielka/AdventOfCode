@@ -84,15 +84,15 @@ extension Point {
 }
 
 struct Rope {
-    var head = Point.zero
-    var tail = Point.zero
-
-    mutating func move(in direction: Direction) {
-        head.move(in: direction)
-        tighten()
+    var head = Point.zero {
+        didSet {
+            tighten()
+        }
     }
 
-    mutating func tighten() {
+    private(set) var tail = Point.zero
+    
+    private mutating func tighten() {
         if abs(head.x - tail.x) > 1 || abs(head.y - tail.y) > 1 {
             tail.x += max(-1, min(head.x - tail.x, 1))
             tail.y += max(-1, min(head.y - tail.y, 1))
@@ -106,7 +106,7 @@ struct State1 {
 
     mutating func process(_ instruction: Instruction) {
         for _ in 0..<instruction.count {
-            rope.move(in: instruction.direction)
+            rope.head.move(in: instruction.direction)
             visitedTailLocations.insert(rope.tail)
         }
     }
@@ -118,29 +118,13 @@ struct State2 {
 
     mutating func process(_ instruction: Instruction) {
         for _ in 0..<instruction.count {
-            ropes[0].move(in: instruction.direction)
+            ropes[0].head.move(in: instruction.direction)
 
             for ropeIndex in ropes.indices.dropFirst() {
                 ropes[ropeIndex].head = ropes[ropeIndex - 1].tail
-                ropes[ropeIndex].tighten()
             }
 
             visitedTailLocations.insert(ropes.last!.tail)
-        }
-
-        var printing = ""
-        for y in -10...10 {
-            var string = ""
-            for x in -10...10 {
-                if x == 0, y == 0 {
-                    string += "s"
-                } else if visitedTailLocations.contains(.init(x: x, y: y)) {
-                    string += "X"
-                } else {
-                    string += "."
-                }
-            }
-            printing = "\(string)\n\(printing)"
         }
     }
 }
